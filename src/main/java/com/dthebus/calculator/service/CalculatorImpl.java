@@ -16,5 +16,42 @@ public class CalculatorImpl implements calculatorService{
         return a+ b; //To change body of generated methods, choose Tools | Templates.
     }
     
+    public double adddouble(double a, double b) {
+        return a+ b; //To change body of generated methods, choose Tools | Templates.
+    }
+   
+
+    public boolean isequals(String a, String b) {
+       return(a==b); //To change body of generated methods, choose Tools | Templates.
+    }
     
+    public boolean istrue(int a, boolean b)
+    {
+        if(a > 10)
+            return true;
+        else
+            return false;
+        
+        
+    
+    }
+    
+    public boolean isfalse(int a, boolean b)
+    {
+        if(a> 10)
+            b= true;
+        else
+            b= false;
+        
+        return b;
+    
+    }
+    public boolean isnull(String a)
+    {
+    return(a==null);
+    }
+    public boolean isntnull(String a)
+    {
+    return(a==null);
+    }
 }

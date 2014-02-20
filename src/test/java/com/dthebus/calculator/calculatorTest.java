@@ -30,7 +30,13 @@ public class calculatorTest {
     //
      @Test
      public void add() { Assert.assertEquals(service.add(2, 4),6);}
-
+     public void adddouble(){Assert.assertEquals(service.adddouble(2.4, 3.2),5.6);}
+     public void isequals(){Assert.assertSame(service.isequals("dog","dog"), true);}
+     public void istrue(){Assert.assertTrue(service.istrue(11, true));}
+     public void isfalse(){Assert.assertFalse(service.isfalse(4, false));}
+     public void isnull(){Assert.assertNull(service.isnull(""));}
+     public void isntnull(){Assert.assertNotNull(service.isnull("Hello"));}
+     public void fails(){Assert.fail("Failed");}
     @BeforeClass
     public static void setUpClass() throws Exception {
         service = new CalculatorImpl();
