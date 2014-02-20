@@ -8,6 +8,7 @@ package com.dthebus.calculator;
 
 import com.dthebus.calculator.service.CalculatorImpl;
 import com.dthebus.calculator.service.calculatorService;
+import org.junit.Ignore;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
@@ -30,13 +31,23 @@ public class calculatorTest {
     //
      @Test
      public void add() { Assert.assertEquals(service.add(2, 4),6);}
+     @Test
      public void adddouble(){Assert.assertEquals(service.adddouble(2.4, 3.2),5.6);}
-     public void isequals(){Assert.assertSame(service.isequals("dog","dog"), true);}
+     @Test
+     public void isequals(){Assert.assertSame(service.isequals(3,3), true);}
+     @Test
      public void istrue(){Assert.assertTrue(service.istrue(11, true));}
+     @Test
      public void isfalse(){Assert.assertFalse(service.isfalse(4, false));}
-     public void isnull(){Assert.assertNull(service.isnull(""));}
+     @Test
+     public void isnull(){Assert.assertNull(service.isnull(null));}
+     @Test
      public void isntnull(){Assert.assertNotNull(service.isnull("Hello"));}
-     public void fails(){Assert.fail("Failed");}
+     @Ignore
+     public void fail(){fail();}
+    
+     
+     
     @BeforeClass
     public static void setUpClass() throws Exception {
         service = new CalculatorImpl();

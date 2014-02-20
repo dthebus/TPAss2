@@ -21,7 +21,7 @@ public class CalculatorImpl implements calculatorService{
     }
    
 
-    public boolean isequals(String a, String b) {
+    public boolean isequals(int a, int b) {
        return(a==b); //To change body of generated methods, choose Tools | Templates.
     }
     
@@ -46,12 +46,12 @@ public class CalculatorImpl implements calculatorService{
         return b;
     
     }
-    public boolean isnull(String a)
+    public String isnull(String a)
     {
-    return(a==null);
+    return a;
     }
-    public boolean isntnull(String a)
+    public String isntnull(String a)
     {
-    return(a==null);
+    return a;
     }
 }

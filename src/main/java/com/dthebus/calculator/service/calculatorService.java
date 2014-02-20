@@ -13,9 +13,9 @@ package com.dthebus.calculator.service;
 public interface calculatorService {
     int add(int a, int b);
     double adddouble(double a, double b);
-    boolean isequals(String a, String b);
+    boolean isequals(int a, int b);
     boolean istrue(int a, boolean b);
     boolean isfalse(int a, boolean b);
-    boolean isnull(String a);
-    boolean isntnull(String a);
+    String isnull(String a);
+    String isntnull(String a);
 }
