@@ -44,10 +44,19 @@ public class calculatorTest {
      @Test
      public void isntnull(){Assert.assertNotNull(service.isnull("Hello"));}
      @Ignore
-     public void fail(){fail();}
-    
-     
-     
+     public void fail(){}
+     @Test
+     public void assertmsg(){Assert.assertEquals(service.add(2, 4),6,"Assert message passed");}
+     @Test 
+     public void arrayStuff(){
+         String[] arr1 = new String[] {"dog", "cat","rat"};
+         String[] arr2 = new String[] {"dog", "cat","rat"};
+         assertEquals(arr1, arr2);
+     }
+     @Test(expectedExceptions = ArithmeticException.class)
+     public void testEx(){
+        int a= 7/0;
+     }
     @BeforeClass
     public static void setUpClass() throws Exception {
         service = new CalculatorImpl();
